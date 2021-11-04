@@ -1,0 +1,12 @@
+C:\Users\0798727\source\repos\CSharpHW\CSharpHW\obj\Debug\CSharpHW.csproj.AssemblyReference.cache
+C:\Users\0798727\source\repos\CSharpHW\CSharpHW\obj\Debug\CSharpHW.Login.resources
+C:\Users\0798727\source\repos\CSharpHW\CSharpHW\obj\Debug\CSharpHW.Main.resources
+C:\Users\0798727\source\repos\CSharpHW\CSharpHW\obj\Debug\CSharpHW.Properties.Resources.resources
+C:\Users\0798727\source\repos\CSharpHW\CSharpHW\obj\Debug\CSharpHW.csproj.GenerateResource.cache
+C:\Users\0798727\source\repos\CSharpHW\CSharpHW\obj\Debug\CSharpHW.csproj.CoreCompileInputs.cache
+C:\Users\0798727\source\repos\CSharpHW\CSharpHW\bin\Debug\CSharpHW.exe.config
+C:\Users\0798727\source\repos\CSharpHW\CSharpHW\bin\Debug\CSharpHW.exe
+C:\Users\0798727\source\repos\CSharpHW\CSharpHW\bin\Debug\CSharpHW.pdb
+C:\Users\0798727\source\repos\CSharpHW\CSharpHW\obj\Debug\CSharpHW.exe
+C:\Users\0798727\source\repos\CSharpHW\CSharpHW\obj\Debug\CSharpHW.pdb
+C:\Users\0798727\source\repos\CSharpHW\CSharpHW\obj\Debug\CSharpHW.Select.resources
