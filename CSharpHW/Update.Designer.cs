@@ -46,10 +46,9 @@ namespace CSharpHW
             // 
             // exitBtn
             // 
-            this.exitBtn.Location = new System.Drawing.Point(442, 242);
-            this.exitBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.exitBtn.Location = new System.Drawing.Point(663, 372);
             this.exitBtn.Name = "exitBtn";
-            this.exitBtn.Size = new System.Drawing.Size(70, 35);
+            this.exitBtn.Size = new System.Drawing.Size(105, 54);
             this.exitBtn.TabIndex = 0;
             this.exitBtn.Text = "Exit";
             this.exitBtn.UseVisualStyleBackColor = true;
@@ -57,10 +56,9 @@ namespace CSharpHW
             // 
             // back
             // 
-            this.back.Location = new System.Drawing.Point(27, 27);
-            this.back.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.back.Location = new System.Drawing.Point(40, 42);
             this.back.Name = "back";
-            this.back.Size = new System.Drawing.Size(79, 38);
+            this.back.Size = new System.Drawing.Size(118, 58);
             this.back.TabIndex = 1;
             this.back.Text = "Back To Main";
             this.back.UseVisualStyleBackColor = true;
@@ -68,69 +66,65 @@ namespace CSharpHW
             // 
             // selectBtn
             // 
-            this.selectBtn.Location = new System.Drawing.Point(26, 81);
-            this.selectBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.selectBtn.Location = new System.Drawing.Point(39, 125);
             this.selectBtn.Name = "selectBtn";
-            this.selectBtn.Size = new System.Drawing.Size(79, 49);
+            this.selectBtn.Size = new System.Drawing.Size(118, 75);
             this.selectBtn.TabIndex = 2;
             this.selectBtn.Text = "To Select";
             this.selectBtn.UseVisualStyleBackColor = true;
+            this.selectBtn.Click += new System.EventHandler(this.selectBtn_Click);
             // 
             // insertBtn
             // 
-            this.insertBtn.Location = new System.Drawing.Point(27, 144);
-            this.insertBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.insertBtn.Location = new System.Drawing.Point(40, 222);
             this.insertBtn.Name = "insertBtn";
-            this.insertBtn.Size = new System.Drawing.Size(79, 49);
+            this.insertBtn.Size = new System.Drawing.Size(118, 75);
             this.insertBtn.TabIndex = 3;
             this.insertBtn.Text = "To Insert";
             this.insertBtn.UseVisualStyleBackColor = true;
+            this.insertBtn.Click += new System.EventHandler(this.insertBtn_Click);
             // 
             // deleteBtn
             // 
-            this.deleteBtn.Location = new System.Drawing.Point(26, 205);
-            this.deleteBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.deleteBtn.Location = new System.Drawing.Point(39, 315);
             this.deleteBtn.Name = "deleteBtn";
-            this.deleteBtn.Size = new System.Drawing.Size(79, 49);
+            this.deleteBtn.Size = new System.Drawing.Size(118, 75);
             this.deleteBtn.TabIndex = 4;
             this.deleteBtn.Text = "To Delete";
             this.deleteBtn.UseVisualStyleBackColor = true;
+            this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(220, 28);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(330, 43);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(139, 26);
+            this.label1.Size = new System.Drawing.Size(205, 37);
             this.label1.TabIndex = 5;
             this.label1.Text = "Update Form";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(177, 93);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(266, 143);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 13);
+            this.label2.Size = new System.Drawing.Size(105, 20);
             this.label2.TabIndex = 6;
             this.label2.Text = "Item Number:";
             // 
             // itemNumTxt
             // 
-            this.itemNumTxt.Location = new System.Drawing.Point(257, 91);
-            this.itemNumTxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.itemNumTxt.Location = new System.Drawing.Point(386, 140);
             this.itemNumTxt.Name = "itemNumTxt";
-            this.itemNumTxt.Size = new System.Drawing.Size(93, 20);
+            this.itemNumTxt.Size = new System.Drawing.Size(138, 26);
             this.itemNumTxt.TabIndex = 7;
             // 
             // updateBtn
             // 
-            this.updateBtn.Location = new System.Drawing.Point(384, 107);
-            this.updateBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.updateBtn.Location = new System.Drawing.Point(576, 165);
             this.updateBtn.Name = "updateBtn";
-            this.updateBtn.Size = new System.Drawing.Size(67, 23);
+            this.updateBtn.Size = new System.Drawing.Size(100, 35);
             this.updateBtn.TabIndex = 8;
             this.updateBtn.Text = "Update";
             this.updateBtn.UseVisualStyleBackColor = true;
@@ -139,34 +133,34 @@ namespace CSharpHW
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(177, 123);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(266, 189);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 13);
+            this.label3.Size = new System.Drawing.Size(83, 20);
             this.label3.TabIndex = 9;
             this.label3.Text = "New Price:";
             // 
             // newPriceTxt
             // 
-            this.newPriceTxt.Location = new System.Drawing.Point(257, 121);
-            this.newPriceTxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.newPriceTxt.Location = new System.Drawing.Point(386, 186);
             this.newPriceTxt.Name = "newPriceTxt";
-            this.newPriceTxt.Size = new System.Drawing.Size(93, 20);
+            this.newPriceTxt.Size = new System.Drawing.Size(138, 26);
             this.newPriceTxt.TabIndex = 10;
             // 
             // dgvNewPrice
             // 
             this.dgvNewPrice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvNewPrice.Location = new System.Drawing.Point(164, 155);
+            this.dgvNewPrice.Location = new System.Drawing.Point(246, 238);
+            this.dgvNewPrice.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvNewPrice.Name = "dgvNewPrice";
-            this.dgvNewPrice.Size = new System.Drawing.Size(254, 83);
+            this.dgvNewPrice.RowHeadersWidth = 62;
+            this.dgvNewPrice.Size = new System.Drawing.Size(381, 128);
             this.dgvNewPrice.TabIndex = 11;
             // 
             // Update
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(551, 313);
+            this.ClientSize = new System.Drawing.Size(826, 482);
             this.Controls.Add(this.dgvNewPrice);
             this.Controls.Add(this.newPriceTxt);
             this.Controls.Add(this.label3);
@@ -179,9 +173,9 @@ namespace CSharpHW
             this.Controls.Add(this.selectBtn);
             this.Controls.Add(this.back);
             this.Controls.Add(this.exitBtn);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Update";
             this.Text = "Update";
+            this.Load += new System.EventHandler(this.Update_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvNewPrice)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

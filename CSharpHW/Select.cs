@@ -90,5 +90,26 @@ namespace CSharpHW
             Main f1 = new Main(frmLogin);
             f1.Show();
         }
+
+        private void toUpdateBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Update f1 = new Update(frmLogin);
+            f1.Show();
+        }
+
+        private void toDeleteBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Delete f1 = new Delete(frmLogin);
+            f1.Show();
+        }
+
+        private void toInsertBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Insert f1 = new Insert(frmLogin);
+            f1.Show();
+        }
     }
 }

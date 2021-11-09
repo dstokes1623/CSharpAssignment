@@ -78,6 +78,7 @@ namespace CSharpHW
             this.toUpdateBtn.TabIndex = 2;
             this.toUpdateBtn.Text = "To Update";
             this.toUpdateBtn.UseVisualStyleBackColor = true;
+            this.toUpdateBtn.Click += new System.EventHandler(this.toUpdateBtn_Click);
             // 
             // toInsertBtn
             // 
@@ -88,6 +89,7 @@ namespace CSharpHW
             this.toInsertBtn.TabIndex = 3;
             this.toInsertBtn.Text = "To Insert";
             this.toInsertBtn.UseVisualStyleBackColor = true;
+            this.toInsertBtn.Click += new System.EventHandler(this.toInsertBtn_Click);
             // 
             // toDeleteBtn
             // 
@@ -98,6 +100,7 @@ namespace CSharpHW
             this.toDeleteBtn.TabIndex = 4;
             this.toDeleteBtn.Text = "To Delete";
             this.toDeleteBtn.UseVisualStyleBackColor = true;
+            this.toDeleteBtn.Click += new System.EventHandler(this.toDeleteBtn_Click);
             // 
             // label1
             // 

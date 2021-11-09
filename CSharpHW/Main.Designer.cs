@@ -67,6 +67,7 @@ namespace CSharpHW
             this.Insert.TabIndex = 2;
             this.Insert.Text = "Insert";
             this.Insert.UseVisualStyleBackColor = true;
+            this.Insert.Click += new System.EventHandler(this.Insert_Click);
             // 
             // Update
             // 
@@ -88,6 +89,7 @@ namespace CSharpHW
             this.Delete.TabIndex = 4;
             this.Delete.Text = "Delete";
             this.Delete.UseVisualStyleBackColor = true;
+            this.Delete.Click += new System.EventHandler(this.Delete_Click);
             // 
             // Main
             // 

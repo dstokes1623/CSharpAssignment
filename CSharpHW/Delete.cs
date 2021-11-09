@@ -14,10 +14,10 @@ using System.Data.OleDb;
 
 namespace CSharpHW
 {
-    public partial class Update : Form
+    public partial class Delete : Form
     {
         Login frmLogin;
-        public Update(Login frmLog)
+        public Delete(Login frmLog)
         {
             InitializeComponent();
             this.frmLogin = frmLog;
@@ -35,54 +35,6 @@ namespace CSharpHW
             f1.Show();
         }
 
-        private void updateBtn_Click(object sender, EventArgs e)
-        {
-            string SearchConnectionString;
-
-            SqlConnection OpenConnection;
-
-            SqlDataAdapter ItemAdapter;
-            ItemAdapter = new SqlDataAdapter();
-
-            DataSet ItemDataSet;
-            ItemDataSet = new DataSet();
-
-            SearchConnectionString = frmLogin.Connect();
-            OpenConnection = new SqlConnection(SearchConnectionString);
-
-            ItemAdapter.SelectCommand = new SqlCommand();
-            ItemAdapter.SelectCommand.Connection = OpenConnection;
-
-            ItemAdapter.SelectCommand.CommandText = "update Item set Price = @NewPrice where Item_Num = @ItemNum ; ";
-            ItemAdapter.SelectCommand.Parameters.AddWithValue("@NewPrice", newPriceTxt.Text);
-            ItemAdapter.SelectCommand.Parameters.AddWithValue("@ItemNum", itemNumTxt.Text);
-
-            try
-            {
-                OpenConnection.Open();
-                ItemAdapter.SelectCommand.ExecuteNonQuery();
-
-                ItemAdapter.SelectCommand.CommandText = "select i.description, i.price from item i where i.ITEM_NUM = @ItemNum";
-                ItemAdapter.Fill(ItemDataSet, "UpdatedPrice");
-
-                dgvNewPrice.AutoGenerateColumns = true;
-                dgvNewPrice.DataSource = ItemDataSet;
-                dgvNewPrice.DataMember = "UpdatedPrice";
-
-                dgvNewPrice.Show();
-                OpenConnection.Close();
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.Message);
-                OpenConnection.Close();
-            }
-
-            ItemAdapter.Dispose();
-            ItemDataSet.Dispose();
-            OpenConnection.Close();
-        }
-
         private void selectBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -90,9 +42,11 @@ namespace CSharpHW
             f1.Show();
         }
 
-        private void Update_Load(object sender, EventArgs e)
+        private void updateBtn_Click(object sender, EventArgs e)
         {
-            dgvNewPrice.Hide();
+            this.Hide();
+            Update f1 = new Update(frmLogin);
+            f1.Show();
         }
 
         private void insertBtn_Click(object sender, EventArgs e)
@@ -102,11 +56,42 @@ namespace CSharpHW
             f1.Show();
         }
 
-        private void deleteBtn_Click(object sender, EventArgs e)
+        private void removeBtn_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Delete f1 = new Delete(frmLogin);
-            f1.Show();
+            string SearchConnectionString;
+
+            SqlConnection OpenConnection;
+
+            SqlDataAdapter ItemAdapter;
+            ItemAdapter = new SqlDataAdapter();
+
+
+            SearchConnectionString = frmLogin.Connect();
+            OpenConnection = new SqlConnection(SearchConnectionString);
+
+            ItemAdapter.SelectCommand = new SqlCommand();
+            ItemAdapter.SelectCommand.Connection = OpenConnection;
+
+            ItemAdapter.SelectCommand.CommandText = "DELETE FROM Item WHERE Item_Num = @ItemNum;";
+            ItemAdapter.SelectCommand.Parameters.AddWithValue("@ItemNum", itemNumTxt.Text);
+
+            try
+            {
+                OpenConnection.Open();
+                ItemAdapter.SelectCommand.ExecuteNonQuery();
+
+                MessageBox.Show("Deletion Successful");
+
+                OpenConnection.Close();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+                OpenConnection.Close();
+            }
+
+            ItemAdapter.Dispose();
+            OpenConnection.Close();
         }
     }
 }

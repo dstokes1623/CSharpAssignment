@@ -45,5 +45,21 @@ namespace CSharpHW
 
             f1.Show();
         }
+
+        private void Insert_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            Insert f1 = new Insert(frmLogin);
+
+            f1.Show();
+        }
+
+        private void Delete_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Delete f1 = new Delete(frmLogin);
+            f1.Show();
+        }
     }
 }
