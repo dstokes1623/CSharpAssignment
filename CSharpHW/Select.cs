@@ -1,14 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
-using System.Data.OleDb;
+
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
+using System.Data;
+using System.Data.SqlClient;
+using System.Data.OleDb;
 
 namespace CSharpHW
 {
@@ -54,14 +56,15 @@ namespace CSharpHW
                 "where i.ITEM_NUM = '" + itemNumTxt.Text + "'; ";
 
             OpenConnection.Open();
+
             ItemAdapter.Fill(ItemDataSet, "Description");
 
             itemNameLbl.DataBindings.Add("Text", ItemDataSet, "Description.DESCRIPTION");
             itemNameLbl.Show();
 
-            ItemAdapter.SelectCommand.CommandText = "select i.ON_HAND, i.PRICE, o.ORDER_NUM, o.ORDER_DATE, ol.NUM_ORDERED, ol.QUOTED_PRICE, c.CUSTOMER_NAME" +
-                                                    " from item i, orders o, ORDER_LINE ol, customer c" +
-                                            "where i.ITEM_NUM = ol.ITEM_NUM and o.ORDER_NUM = ol.ORDER_NUM and c.CUSTOMER_NUM = o.CUSTOMER_NUM and i.ITEM_NUM = '" + itemNumTxt.Text + "'; ";
+            ItemAdapter.SelectCommand.CommandText = "select i.ON_HAND, i.PRICE, o.ORDER_NUM, o.ORDER_DATE, ol.NUM_ORDERED, ol.QUOTED_PRICE, c.CUSTOMER_NAME " +
+                "from item i, orders o, ORDER_LINE ol, customer c " +
+                "where i.ITEM_NUM = ol.ITEM_NUM and o.ORDER_NUM = ol.ORDER_NUM and c.CUSTOMER_NUM = o.CUSTOMER_NUM and i.ITEM_NUM = '"+itemNumTxt.Text+"';";
 
             ItemAdapter.Fill(ItemDataSet, "ItemDetails");
 
@@ -69,9 +72,7 @@ namespace CSharpHW
             itemDetailsDGV.DataSource = ItemDataSet;
             itemDetailsDGV.DataMember = "ItemDetails";
 
-            ItemAdapter.SelectCommand.CommandText = "select (i.ON_HAND * i.PRICE) 'On_Hand_Value'" +
-                                                    " from item i" +
-                                            "where i.ITEM_NUM = '" + itemNumTxt.Text + "'; ";
+            ItemAdapter.SelectCommand.CommandText = "select (i.ON_HAND * i.PRICE) 'On_Hand_Value' from item i where i.ITEM_NUM = '"+itemNumTxt.Text+"';";
 
             ItemAdapter.Fill(ItemDataSet, "OnHandValue");
             onHandValueLbl.DataBindings.Add("Text", ItemDataSet, "OnHandValue.On_Hand_Value");

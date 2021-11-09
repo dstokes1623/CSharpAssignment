@@ -57,7 +57,30 @@ namespace CSharpHW
             ItemAdapter.SelectCommand.Parameters.AddWithValue("@NewPrice", newPriceTxt.Text);
             ItemAdapter.SelectCommand.Parameters.AddWithValue("@ItemNum", itemNumTxt.Text);
 
-            OpenConnection.Open();
+            try
+            {
+                OpenConnection.Open();
+                ItemAdapter.SelectCommand.ExecuteNonQuery();
+
+                ItemAdapter.SelectCommand.CommandText = "select i.description, i.price from item i where i.ITEM_NUM = @ItemNum";
+                ItemAdapter.Fill(ItemDataSet, "UpdatedPrice");
+
+                dgvNewPrice.AutoGenerateColumns = true;
+                dgvNewPrice.DataSource = ItemDataSet;
+                dgvNewPrice.DataMember = "UpdatedPrice";
+
+                dgvNewPrice.Show();
+                OpenConnection.Close();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+                OpenConnection.Close();
+            }
+
+            ItemAdapter.Dispose();
+            ItemDataSet.Dispose();
+            OpenConnection.Close();
         }
     }
 }
