@@ -36,5 +36,14 @@ namespace CSharpHW
 
             f1.Show();
         }
+
+        private void Update_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            Update f1 = new Update(frmLogin);
+
+            f1.Show();
+        }
     }
 }

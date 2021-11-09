@@ -29,11 +29,12 @@ namespace CSharpHW
         private void Select_Load(object sender, EventArgs e)
         {
             itemNameLbl.Hide();
+            onHandValueLbl.Hide();
         }
 
         private void searchBtn_Click(object sender, EventArgs e)
         {
-            string SearchConnectionString, ItemNumber;
+             string SearchConnectionString;
 
             SqlConnection OpenConnection;
 
@@ -68,10 +69,25 @@ namespace CSharpHW
             itemDetailsDGV.DataSource = ItemDataSet;
             itemDetailsDGV.DataMember = "ItemDetails";
 
+            ItemAdapter.SelectCommand.CommandText = "select (i.ON_HAND * i.PRICE) 'On_Hand_Value'" +
+                                                    " from item i" +
+                                            "where i.ITEM_NUM = '" + itemNumTxt.Text + "'; ";
+
+            ItemAdapter.Fill(ItemDataSet, "OnHandValue");
+            onHandValueLbl.DataBindings.Add("Text", ItemDataSet, "OnHandValue.On_Hand_Value");
+            onHandValueLbl.Show();
+
             ItemAdapter.Dispose();
             ItemDataSet.Dispose();
             OpenConnection.Close();
 
+        }
+
+        private void backFromSelectBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Main f1 = new Main(frmLogin);
+            f1.Show();
         }
     }
 }
