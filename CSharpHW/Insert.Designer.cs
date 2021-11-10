@@ -35,33 +35,28 @@ namespace CSharpHW
             this.back = new System.Windows.Forms.Button();
             this.exitBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.repNumTxt = new System.Windows.Forms.TextBox();
-            this.lastNameTxt = new System.Windows.Forms.TextBox();
+            this.itemNumTxt = new System.Windows.Forms.TextBox();
+            this.descriptionTxt = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.firstNameTxt = new System.Windows.Forms.TextBox();
+            this.onHandTxt = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.addressTxt = new System.Windows.Forms.TextBox();
+            this.categoryTxt = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.cityTxt = new System.Windows.Forms.TextBox();
+            this.storehouseTxt = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.stateTxt = new System.Windows.Forms.TextBox();
+            this.priceTxt = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.zipCodeTxt = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.commissionTxt = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.rateTxt = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.hireBtn = new System.Windows.Forms.Button();
-            this.dgvNewRep = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvNewRep)).BeginInit();
+            this.addBtn = new System.Windows.Forms.Button();
+            this.dgvNewItem = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNewItem)).BeginInit();
             this.SuspendLayout();
             // 
             // deleteBtn
             // 
-            this.deleteBtn.Location = new System.Drawing.Point(84, 347);
+            this.deleteBtn.Location = new System.Drawing.Point(56, 226);
+            this.deleteBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.deleteBtn.Name = "deleteBtn";
-            this.deleteBtn.Size = new System.Drawing.Size(118, 75);
+            this.deleteBtn.Size = new System.Drawing.Size(79, 49);
             this.deleteBtn.TabIndex = 8;
             this.deleteBtn.Text = "To Delete";
             this.deleteBtn.UseVisualStyleBackColor = true;
@@ -69,9 +64,10 @@ namespace CSharpHW
             // 
             // updateBtn
             // 
-            this.updateBtn.Location = new System.Drawing.Point(85, 254);
+            this.updateBtn.Location = new System.Drawing.Point(57, 165);
+            this.updateBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.updateBtn.Name = "updateBtn";
-            this.updateBtn.Size = new System.Drawing.Size(118, 75);
+            this.updateBtn.Size = new System.Drawing.Size(79, 49);
             this.updateBtn.TabIndex = 7;
             this.updateBtn.Text = "To Update";
             this.updateBtn.UseVisualStyleBackColor = true;
@@ -79,9 +75,10 @@ namespace CSharpHW
             // 
             // selectBtn
             // 
-            this.selectBtn.Location = new System.Drawing.Point(84, 157);
+            this.selectBtn.Location = new System.Drawing.Point(56, 102);
+            this.selectBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.selectBtn.Name = "selectBtn";
-            this.selectBtn.Size = new System.Drawing.Size(118, 75);
+            this.selectBtn.Size = new System.Drawing.Size(79, 49);
             this.selectBtn.TabIndex = 6;
             this.selectBtn.Text = "To Select";
             this.selectBtn.UseVisualStyleBackColor = true;
@@ -89,9 +86,10 @@ namespace CSharpHW
             // 
             // back
             // 
-            this.back.Location = new System.Drawing.Point(85, 74);
+            this.back.Location = new System.Drawing.Point(57, 48);
+            this.back.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.back.Name = "back";
-            this.back.Size = new System.Drawing.Size(118, 58);
+            this.back.Size = new System.Drawing.Size(79, 38);
             this.back.TabIndex = 5;
             this.back.Text = "Back To Main";
             this.back.UseVisualStyleBackColor = true;
@@ -99,9 +97,10 @@ namespace CSharpHW
             // 
             // exitBtn
             // 
-            this.exitBtn.Location = new System.Drawing.Point(714, 498);
+            this.exitBtn.Location = new System.Drawing.Point(476, 324);
+            this.exitBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.exitBtn.Name = "exitBtn";
-            this.exitBtn.Size = new System.Drawing.Size(103, 66);
+            this.exitBtn.Size = new System.Drawing.Size(69, 43);
             this.exitBtn.TabIndex = 9;
             this.exitBtn.Text = "Exit";
             this.exitBtn.UseVisualStyleBackColor = true;
@@ -110,200 +109,161 @@ namespace CSharpHW
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(314, 77);
+            this.label1.Location = new System.Drawing.Point(209, 50);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 20);
+            this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 10;
-            this.label1.Text = "Rep Num:";
+            this.label1.Text = "Item Num:";
             // 
-            // repNumTxt
+            // itemNumTxt
             // 
-            this.repNumTxt.Location = new System.Drawing.Point(422, 71);
-            this.repNumTxt.Name = "repNumTxt";
-            this.repNumTxt.Size = new System.Drawing.Size(160, 26);
-            this.repNumTxt.TabIndex = 11;
+            this.itemNumTxt.Location = new System.Drawing.Point(281, 46);
+            this.itemNumTxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.itemNumTxt.Name = "itemNumTxt";
+            this.itemNumTxt.Size = new System.Drawing.Size(108, 20);
+            this.itemNumTxt.TabIndex = 11;
             // 
-            // lastNameTxt
+            // descriptionTxt
             // 
-            this.lastNameTxt.Location = new System.Drawing.Point(422, 118);
-            this.lastNameTxt.Name = "lastNameTxt";
-            this.lastNameTxt.Size = new System.Drawing.Size(160, 26);
-            this.lastNameTxt.TabIndex = 13;
+            this.descriptionTxt.Location = new System.Drawing.Point(281, 77);
+            this.descriptionTxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.descriptionTxt.Name = "descriptionTxt";
+            this.descriptionTxt.Size = new System.Drawing.Size(108, 20);
+            this.descriptionTxt.TabIndex = 13;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(304, 121);
+            this.label2.Location = new System.Drawing.Point(203, 79);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 20);
+            this.label2.Size = new System.Drawing.Size(63, 13);
             this.label2.TabIndex = 12;
-            this.label2.Text = "Last Name:";
+            this.label2.Text = "Description:";
             // 
-            // firstNameTxt
+            // onHandTxt
             // 
-            this.firstNameTxt.Location = new System.Drawing.Point(422, 166);
-            this.firstNameTxt.Name = "firstNameTxt";
-            this.firstNameTxt.Size = new System.Drawing.Size(160, 26);
-            this.firstNameTxt.TabIndex = 15;
+            this.onHandTxt.Location = new System.Drawing.Point(281, 108);
+            this.onHandTxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.onHandTxt.Name = "onHandTxt";
+            this.onHandTxt.Size = new System.Drawing.Size(108, 20);
+            this.onHandTxt.TabIndex = 15;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(304, 166);
+            this.label3.Location = new System.Drawing.Point(208, 108);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 20);
+            this.label3.Size = new System.Drawing.Size(53, 13);
             this.label3.TabIndex = 14;
-            this.label3.Text = "First Name:";
+            this.label3.Text = "On Hand:";
             // 
-            // addressTxt
+            // categoryTxt
             // 
-            this.addressTxt.Location = new System.Drawing.Point(422, 219);
-            this.addressTxt.Name = "addressTxt";
-            this.addressTxt.Size = new System.Drawing.Size(160, 26);
-            this.addressTxt.TabIndex = 17;
+            this.categoryTxt.Location = new System.Drawing.Point(281, 142);
+            this.categoryTxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.categoryTxt.Name = "categoryTxt";
+            this.categoryTxt.Size = new System.Drawing.Size(108, 20);
+            this.categoryTxt.TabIndex = 17;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(274, 219);
+            this.label4.Location = new System.Drawing.Point(209, 145);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(120, 20);
+            this.label4.Size = new System.Drawing.Size(52, 13);
             this.label4.TabIndex = 16;
-            this.label4.Text = "Street Address:";
+            this.label4.Text = "Category:";
             // 
-            // cityTxt
+            // storehouseTxt
             // 
-            this.cityTxt.Location = new System.Drawing.Point(422, 269);
-            this.cityTxt.Name = "cityTxt";
-            this.cityTxt.Size = new System.Drawing.Size(160, 26);
-            this.cityTxt.TabIndex = 19;
+            this.storehouseTxt.Location = new System.Drawing.Point(281, 175);
+            this.storehouseTxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.storehouseTxt.Name = "storehouseTxt";
+            this.storehouseTxt.Size = new System.Drawing.Size(108, 20);
+            this.storehouseTxt.TabIndex = 19;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(343, 272);
+            this.label5.Location = new System.Drawing.Point(200, 182);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(39, 20);
+            this.label5.Size = new System.Drawing.Size(64, 13);
             this.label5.TabIndex = 18;
-            this.label5.Text = "City:";
+            this.label5.Text = "Storehouse:";
             // 
-            // stateTxt
+            // priceTxt
             // 
-            this.stateTxt.Location = new System.Drawing.Point(422, 317);
-            this.stateTxt.Name = "stateTxt";
-            this.stateTxt.Size = new System.Drawing.Size(160, 26);
-            this.stateTxt.TabIndex = 21;
+            this.priceTxt.Location = new System.Drawing.Point(281, 206);
+            this.priceTxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.priceTxt.Name = "priceTxt";
+            this.priceTxt.Size = new System.Drawing.Size(108, 20);
+            this.priceTxt.TabIndex = 21;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(343, 320);
+            this.label6.Location = new System.Drawing.Point(229, 208);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 20);
+            this.label6.Size = new System.Drawing.Size(34, 13);
             this.label6.TabIndex = 20;
-            this.label6.Text = "State:";
+            this.label6.Text = "Price:";
             // 
-            // zipCodeTxt
+            // addBtn
             // 
-            this.zipCodeTxt.Location = new System.Drawing.Point(422, 362);
-            this.zipCodeTxt.Name = "zipCodeTxt";
-            this.zipCodeTxt.Size = new System.Drawing.Size(160, 26);
-            this.zipCodeTxt.TabIndex = 23;
+            this.addBtn.Location = new System.Drawing.Point(260, 329);
+            this.addBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addBtn.Name = "addBtn";
+            this.addBtn.Size = new System.Drawing.Size(91, 38);
+            this.addBtn.TabIndex = 28;
+            this.addBtn.Text = "Add Item";
+            this.addBtn.UseVisualStyleBackColor = true;
+            this.addBtn.Click += new System.EventHandler(this.hireBtn_Click);
             // 
-            // label7
+            // dgvNewItem
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(295, 362);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(99, 20);
-            this.label7.TabIndex = 22;
-            this.label7.Text = "Postal Code:";
-            // 
-            // commissionTxt
-            // 
-            this.commissionTxt.Location = new System.Drawing.Point(422, 411);
-            this.commissionTxt.Name = "commissionTxt";
-            this.commissionTxt.Size = new System.Drawing.Size(160, 26);
-            this.commissionTxt.TabIndex = 25;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(295, 417);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(99, 20);
-            this.label8.TabIndex = 24;
-            this.label8.Text = "Commission:";
-            // 
-            // rateTxt
-            // 
-            this.rateTxt.Location = new System.Drawing.Point(422, 460);
-            this.rateTxt.Name = "rateTxt";
-            this.rateTxt.Size = new System.Drawing.Size(160, 26);
-            this.rateTxt.TabIndex = 27;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(343, 463);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(48, 20);
-            this.label9.TabIndex = 26;
-            this.label9.Text = "Rate:";
-            // 
-            // hireBtn
-            // 
-            this.hireBtn.Location = new System.Drawing.Point(390, 506);
-            this.hireBtn.Name = "hireBtn";
-            this.hireBtn.Size = new System.Drawing.Size(137, 58);
-            this.hireBtn.TabIndex = 28;
-            this.hireBtn.Text = "Hire Rep";
-            this.hireBtn.UseVisualStyleBackColor = true;
-            this.hireBtn.Click += new System.EventHandler(this.hireBtn_Click);
-            // 
-            // dgvNewRep
-            // 
-            this.dgvNewRep.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvNewRep.Location = new System.Drawing.Point(620, 88);
-            this.dgvNewRep.Name = "dgvNewRep";
-            this.dgvNewRep.RowHeadersWidth = 62;
-            this.dgvNewRep.RowTemplate.Height = 28;
-            this.dgvNewRep.Size = new System.Drawing.Size(349, 380);
-            this.dgvNewRep.TabIndex = 29;
+            this.dgvNewItem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvNewItem.Location = new System.Drawing.Point(413, 57);
+            this.dgvNewItem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvNewItem.Name = "dgvNewItem";
+            this.dgvNewItem.RowHeadersWidth = 62;
+            this.dgvNewItem.RowTemplate.Height = 28;
+            this.dgvNewItem.Size = new System.Drawing.Size(233, 247);
+            this.dgvNewItem.TabIndex = 29;
             // 
             // Insert
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1005, 599);
-            this.Controls.Add(this.dgvNewRep);
-            this.Controls.Add(this.hireBtn);
-            this.Controls.Add(this.rateTxt);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.commissionTxt);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.zipCodeTxt);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.stateTxt);
+            this.ClientSize = new System.Drawing.Size(670, 389);
+            this.Controls.Add(this.dgvNewItem);
+            this.Controls.Add(this.addBtn);
+            this.Controls.Add(this.priceTxt);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.cityTxt);
+            this.Controls.Add(this.storehouseTxt);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.addressTxt);
+            this.Controls.Add(this.categoryTxt);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.firstNameTxt);
+            this.Controls.Add(this.onHandTxt);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.lastNameTxt);
+            this.Controls.Add(this.descriptionTxt);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.repNumTxt);
+            this.Controls.Add(this.itemNumTxt);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.deleteBtn);
             this.Controls.Add(this.updateBtn);
             this.Controls.Add(this.selectBtn);
             this.Controls.Add(this.back);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Insert";
             this.Text = "Insert";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvNewRep)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNewItem)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -317,24 +277,18 @@ namespace CSharpHW
         private System.Windows.Forms.Button back;
         private System.Windows.Forms.Button exitBtn;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox repNumTxt;
-        private System.Windows.Forms.TextBox lastNameTxt;
+        private System.Windows.Forms.TextBox itemNumTxt;
+        private System.Windows.Forms.TextBox descriptionTxt;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox firstNameTxt;
+        private System.Windows.Forms.TextBox onHandTxt;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox addressTxt;
+        private System.Windows.Forms.TextBox categoryTxt;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox cityTxt;
+        private System.Windows.Forms.TextBox storehouseTxt;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox stateTxt;
+        private System.Windows.Forms.TextBox priceTxt;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox zipCodeTxt;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox commissionTxt;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox rateTxt;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button hireBtn;
-        private System.Windows.Forms.DataGridView dgvNewRep;
+        private System.Windows.Forms.Button addBtn;
+        private System.Windows.Forms.DataGridView dgvNewItem;
     }
 }

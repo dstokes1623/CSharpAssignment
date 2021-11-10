@@ -41,43 +41,41 @@ namespace CSharpHW
 
             SqlConnection OpenConnection;
 
-            SqlDataAdapter RepAdapter;
-            RepAdapter = new SqlDataAdapter();
+            SqlDataAdapter ItemAdapter;
+            ItemAdapter = new SqlDataAdapter();
 
-            DataSet RepDataSet;
-            RepDataSet = new DataSet();
+            DataSet ItemDataSet;
+            ItemDataSet = new DataSet();
 
             SearchConnectionString = frmLogin.Connect();
             OpenConnection = new SqlConnection(SearchConnectionString);
 
-            RepAdapter.SelectCommand = new SqlCommand();
-            RepAdapter.SelectCommand.Connection = OpenConnection;
+            ItemAdapter.SelectCommand = new SqlCommand();
+            ItemAdapter.SelectCommand.Connection = OpenConnection;
 
-            RepAdapter.SelectCommand.CommandText = "Insert into Rep VALUES " +
-                "(@RepNum, @LastName, @FirstName, @StreetAddress, @City, @State, @PostalCode, @Commission, @Rate); ";
-            RepAdapter.SelectCommand.Parameters.AddWithValue("@RepNum", repNumTxt.Text);
-            RepAdapter.SelectCommand.Parameters.AddWithValue("@LastName", lastNameTxt.Text);
-            RepAdapter.SelectCommand.Parameters.AddWithValue("@FirstName", firstNameTxt.Text);
-            RepAdapter.SelectCommand.Parameters.AddWithValue("@StreetAddress", addressTxt.Text);
-            RepAdapter.SelectCommand.Parameters.AddWithValue("@City", cityTxt.Text);
-            RepAdapter.SelectCommand.Parameters.AddWithValue("@State", stateTxt.Text);
-            RepAdapter.SelectCommand.Parameters.AddWithValue("@PostalCode", zipCodeTxt.Text);
-            RepAdapter.SelectCommand.Parameters.AddWithValue("@Commission", commissionTxt.Text);
-            RepAdapter.SelectCommand.Parameters.AddWithValue("@Rate", rateTxt.Text);
+
+            ItemAdapter.SelectCommand.CommandText = "Insert into Item VALUES " +
+                "(@ItemNum, @Description, @OnHand, @Category, @Storehouse, @Price); ";
+            ItemAdapter.SelectCommand.Parameters.AddWithValue("@ItemNum", itemNumTxt.Text);
+            ItemAdapter.SelectCommand.Parameters.AddWithValue("@Description", descriptionTxt.Text);
+            ItemAdapter.SelectCommand.Parameters.AddWithValue("@OnHand", onHandTxt.Text);
+            ItemAdapter.SelectCommand.Parameters.AddWithValue("@Category", categoryTxt.Text);
+            ItemAdapter.SelectCommand.Parameters.AddWithValue("@Storehouse", storehouseTxt.Text);
+            ItemAdapter.SelectCommand.Parameters.AddWithValue("@Price", priceTxt.Text);
 
             try
             {
                 OpenConnection.Open();
-                RepAdapter.SelectCommand.ExecuteNonQuery();
+                ItemAdapter.SelectCommand.ExecuteNonQuery();
 
-                RepAdapter.SelectCommand.CommandText = "select * from rep r where r.REP_NUM = @RepNum";
-                RepAdapter.Fill(RepDataSet, "NewEmployee");
+                ItemAdapter.SelectCommand.CommandText = "select * from item i where i.ITEM_NUM = @ItemNum";
+                ItemAdapter.Fill(ItemDataSet, "NewItem");
 
-                dgvNewRep.AutoGenerateColumns = true;
-                dgvNewRep.DataSource = RepDataSet;
-                dgvNewRep.DataMember = "NewEmployee";
+                dgvNewItem.AutoGenerateColumns = true;
+                dgvNewItem.DataSource = ItemDataSet;
+                dgvNewItem.DataMember = "NewItem";
 
-                dgvNewRep.Show();
+                dgvNewItem.Show();
                 OpenConnection.Close();
             }
             catch (SqlException ex)
@@ -86,8 +84,8 @@ namespace CSharpHW
                 OpenConnection.Close();
             }
 
-            RepAdapter.Dispose();
-            RepDataSet.Dispose();
+            ItemAdapter.Dispose();
+            ItemDataSet.Dispose();
             OpenConnection.Close();
         }
 

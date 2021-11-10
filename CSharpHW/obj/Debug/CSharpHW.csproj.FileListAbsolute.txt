@@ -23,3 +23,5 @@ C:\Users\0798727\Documents\CSharpAssignment\CSharpHW\obj\Debug\CSharpHW.csproj.G
 C:\Users\0798727\Documents\CSharpAssignment\CSharpHW\obj\Debug\CSharpHW.csproj.CoreCompileInputs.cache
 C:\Users\0798727\Documents\CSharpAssignment\CSharpHW\obj\Debug\CSharpHW.exe
 C:\Users\0798727\Documents\CSharpAssignment\CSharpHW\obj\Debug\CSharpHW.pdb
+C:\Users\0798727\Documents\CSharpAssignment\CSharpHW\obj\Debug\CSharpHW.Delete.resources
+C:\Users\0798727\Documents\CSharpAssignment\CSharpHW\obj\Debug\CSharpHW.Insert.resources
